@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages 跳转链接示例</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-bottom: 40px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        h1 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            font-size: 2.8rem;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+        
+        h2 {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #fdbb2d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2 i {
+            color: #b21f1f;
+        }
+        
+        .link-list {
+            list-style: none;
+        }
+        
+        .link-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(26, 42, 108, 0.05);
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+        
+        .link-list li:hover {
+            background: rgba(26, 42, 108, 0.1);
+        }
+        
+        .link-list a {
+            text-decoration: none;
+            color: #1a2a6c;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .link-list a:hover {
+            color: #b21f1f;
+        }
+        
+        .link-list a i {
+            font-size: 1.2rem;
+        }
+        
+        .link-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+            margin-left: 30px;
+        }
+        
+        .code-block {
+            background: #1a2a6c;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: monospace;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+        
+        .code-block code {
+            display: block;
+            line-height: 1.5;
+        }
+        
+        .highlight {
+            color: #fdbb2d;
+        }
+        
+        .note {
+            background: rgba(253, 187, 45, 0.2);
+            border-left: 4px solid #fdbb2d;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        
+        .footer a {
+            color: #fdbb2d;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GitHub Pages 跳转链接指南</h1>
+            <p class="tagline">学习如何在您的 GitHub Pages 网站中添加各种类型的跳转链接</p>
+        </header>
+        
+        <div class="content">
+            <div class="card">
+                <h2><i class="fas fa-link"></i> 内部页面链接</h2>
+                <p>链接到您网站内的其他页面</p>
+                
+                <ul class="link-list">
+                    <li>
+                        <a href="#section1"><i class="fas fa-arrow-right"></i> 跳转到页面段落</a>
+                        <div class="link-description">使用锚点链接跳转到页面特定部分</div>
+                    </li>
+                    <li>
+                        <a href="about.html"><i class="fas fa-user"></i> 关于我们页面</a>
+                        <div class="link-description">链接到同一目录下的其他HTML文件</div>
+                    </li>
+                    <li>
+                        <a href="projects/index.html"><i class="fas fa-folder"></i> 项目页面</a>
+                        <div class="link-description">链接到子目录中的页面</div>
+                    </li>
+                </ul>
+                
+                <div class="code-block">
+                    <code>
+                        &lt;!-- 锚点链接 --&gt;<br>
+                        &lt;a href=<span class="highlight">"#section1"</span>&gt;跳转到第一节&lt;/a&gt;<br><br>
+                        
+                        &lt;!-- 同一目录页面 --&gt;<br>
+                        &lt;a href=<span class="highlight">"about.html"</span>&gt;关于我们&lt;/a&gt;<br><br>
+                        
+                        &lt;!-- 子目录页面 --&gt;<br>
+                        &lt;a href=<span class="highlight">"projects/index.html"</span>&gt;我的项目&lt;/a&gt;
+                    </code>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2><i class="fas fa-external-link-alt"></i> 外部网站链接</h2>
+                <p>链接到其他网站和在线资源</p>
+                
+                <ul class="link-list">
+                    <li>
+                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub 官网</a>
+                        <div class="link-description">使用 target="_blank" 在新标签页中打开</div>
+                    </li>
+                    <li>
+                        <a href="https://pages.github.com" target="_blank"><i class="fas fa-cloud"></i> GitHub Pages 文档</a>
+                        <div class="link-description">链接到官方文档和资源</div>
+                    </li>
+                    <li>
+                        <a href="mailto:example@example.com"><i class="fas fa-envelope"></i> 发送电子邮件</a>
+                        <div class="link-description">使用 mailto: 链接打开电子邮件客户端</div>
+                    </li>
+                </ul>
+                
+                <div class="code-block">
+                    <code>
+                        &lt;!-- 外部网站链接 --&gt;<br>
+                        &lt;a href=<span class="highlight">"https://github.com"</span> target=<span class="highlight">"_blank"</span>&gt;<br>
+                        &nbsp;&nbsp;访问 GitHub<br>
+                        &lt;/a&gt;<br><br>
+                        
+                        &lt;!-- 电子邮件链接 --&gt;<br>
+                        &lt;a href=<span class="highlight">"mailto:example@example.com"</span>&gt;<br>
+                        &nbsp;&nbsp;联系我们<br>
+                        &lt;/a&gt;
+                    </code>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2><i class="fas fa-download"></i> 文件下载链接</h2>
+                <p>链接到可供下载的文件</p>
+                
+                <ul class="link-list">
+                    <li>
+                        <a href="resume.pdf" download><i class="fas fa-file-pdf"></i> 下载简历 (PDF)</a>
+                        <div class="link-description">使用 download 属性强制下载文件</div>
+                    </li>
+                    <li>
+                        <a href="docs/guide.docx"><i class="fas fa-file-word"></i> 用户指南 (DOCX)</a>
+                        <div class="link-description">链接到文档文件</div>
+                    </li>
+                    <li>
+                        <a href="images/photo.jpg"><i class="fas fa-image"></i> 查看大图 (JPG)</a>
+                        <div class="link-description">链接到图像文件</div>
+                    </li>
+                </ul>
+                
+                <div class="code-block">
+                    <code>
+                        &lt;!-- 强制下载 --&gt;<br>
+                        &lt;a href=<span class="highlight">"resume.pdf"</span> download&gt;<br>
+                        &nbsp;&nbsp;下载我的简历<br>
+                        &lt;/a&gt;<br><br>
+                        
+                        &lt;!-- 文档链接 --&gt;<br>
+                        &lt;a href=<span class="highlight">"docs/guide.docx"</span>&gt;<br>
+                        &nbsp;&nbsp;用户指南<br>
+                        &lt;/a&gt;<br><br>
+                        
+                        &lt;!-- 图像链接 --&gt;<br>
+                        &lt;a href=<span class="highlight">"images/photo.jpg"</span>&gt;<br>
+                        &nbsp;&nbsp;查看大图<br>
+                        &lt;/a&gt;
+                    </code>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2><i class="fas fa-code"></i> 按钮和高级链接</h2>
+                <p>使用CSS创建美观的按钮式链接</p>
+                
+                <ul class="link-list">
+                    <li>
+                        <a href="#" class="button-link primary"><i class="fas fa-star"></i> 主要操作按钮</a>
+                        <div class="link-description">使用CSS类创建突出显示的按钮</div>
+                    </li>
+                    <li>
+                        <a href="#" class="button-link secondary"><i class="fas fa-arrow-right"></i> 次要操作按钮</a>
+                        <div class="link-description">样式化的次要操作按钮</div>
+                    </li>
+                    <li>
+                        <a href="#" class="button-link outline"><i class="fas fa-download"></i> 轮廓按钮</a>
+                        <div class="link-description">带有边框的按钮样式</div>
+                    </li>
+                </ul>
+                
+                <div class="code-block">
+                    <code>
+                        &lt;!-- 按钮样式链接 --&gt;<br>
+                        &lt;a href=<span class="highlight">"#"</span> class=<span class="highlight">"button primary"</span>&gt;<br>
+                        &nbsp;&nbsp;主要按钮<br>
+                        &lt;/a&gt;<br><br>
+                        
+                        &lt;style&gt;<br>
+                        <span class="highlight">.button</span> {<br>
+                        &nbsp;&nbsp;display: inline-block;<br>
+                        &nbsp;&nbsp;padding: 10px 20px;<br>
+                        &nbsp;&nbsp;background: #1a2a6c;<br>
+                        &nbsp;&nbsp;color: white;<br>
+                        &nbsp;&nbsp;text-decoration: none;<br>
+                        &nbsp;&nbsp;border-radius: 5px;<br>
+                        }<br>
+                        &lt;/style&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2><i class="fas fa-lightbulb"></i> 最佳实践和提示</h2>
+            
+            <div class="note">
+                <p><strong>路径提示：</strong> 在GitHub Pages中，使用相对路径链接到您仓库中的其他文件。</p>
+            </div>
+            
+            <div class="note">
+                <p><strong>外部链接：</strong> 对于外部网站，始终使用完整的URL（包括https://）。</p>
+            </div>
+            
+            <div class="note">
+                <p><strong>用户体验：</strong> 当链接到外部网站时，考虑使用 target="_blank" 在新标签页中打开，让用户不会离开您的网站。</p>
+            </div>
+            
+            <div class="note">
+                <p><strong>可访问性：</strong> 为所有链接提供清晰的描述性文本，方便屏幕阅读器用户理解链接目的。</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>GitHub Pages 链接示例 &copy; 2023 | 查看 <a href="https://docs.github.com/zh/pages" target="_blank">GitHub Pages 官方文档</a> 获取更多信息</p>
+        </div>
+    </div>
+    
+    <script>
+        // 添加一些交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.link-list a');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        alert('这是一个示例链接！在实际网站中，这里会跳转到目标页面。');
+                    }
+                });
+            });
+            
+            // 添加滚动动画
+            const cards = document.querySelectorAll('.card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

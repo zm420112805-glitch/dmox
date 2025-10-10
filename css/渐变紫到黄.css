@@ -1,0 +1,170 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-bottom: 40px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        h1 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            font-size: 2.8rem;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+        
+        h2 {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #fdbb2d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2 i {
+            color: #b21f1f;
+        }
+        
+        .link-list {
+            list-style: none;
+        }
+        
+        .link-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(26, 42, 108, 0.05);
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+        
+        .link-list li:hover {
+            background: rgba(26, 42, 108, 0.1);
+        }
+        
+        .link-list a {
+            text-decoration: none;
+            color: #1a2a6c;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .link-list a:hover {
+            color: #b21f1f;
+        }
+        
+        .link-list a i {
+            font-size: 1.2rem;
+        }
+        
+        .link-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+            margin-left: 30px;
+        }
+        
+        .code-block {
+            background: #1a2a6c;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: monospace;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+        
+        .code-block code {
+            display: block;
+            line-height: 1.5;
+        }
+        
+        .highlight {
+            color: #fdbb2d;
+        }
+        
+        .note {
+            background: rgba(253, 187, 45, 0.2);
+            border-left: 4px solid #fdbb2d;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        
+        .footer a {
+            color: #fdbb2d;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }

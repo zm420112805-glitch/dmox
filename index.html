@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dmox</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 内联样式示例 */
+        .welcome-section {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">Dmox</h1>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h1>Welcome to my website</h1>
+            <p>This is a wonderful place</p>
+            <button class="cta-button">CLICK TO KNOW MORE</button>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Products Catalog</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>T-shirt</h3>
+                        <p>Find the novelty Tshirt，like <code>Black Daily</code></p>
+                    </div>
+                    <div class="card">
+                        <h3>Mug</h3>
+                        <p>Support <code>&lt;One side&gt;</code> or <code>&lt;Double Side&gt;</code> printing</p>
+                    </div>
+                    <div class="card">
+                        <h3>Cap</h3>
+                        <p>Get one new cap for your own design! You are the most shining one!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2>What we can do?</h2>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Color</h3>
+                        <p>Choose your favorite color</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📐</div>
+                        <h3>Size</h3>
+                        <p>Range of sizes available</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">✨</div>
+                        <h3>Personality</h3>
+                        <p>Add your own personality design</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+                        <h3>Convient</h3>
+                        <p>Convient disign by easy connecting</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Powered By Dmox</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互效果
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            alert('Thank you！The website is on building, will comming soon!');
+        });
+        
+        // 为卡片添加悬停效果
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

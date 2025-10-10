@@ -115,6 +115,38 @@
                 this.style.transform = 'translateY(0)';
             });
         });
+
+        // 添加一些交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.link-list a');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        alert('这是一个示例链接！在实际网站中，这里会跳转到目标页面。');
+                    }
+                });
+            });
+            
+            // 添加滚动动画
+            const cards = document.querySelectorAll('.card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
     </script>
 </body>
 </html>

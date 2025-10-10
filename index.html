@@ -1,12 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>Dmox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 GitHub Pages 网站</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 内联样式示例 */
+        .welcome-section {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome Visit Dmox!</h1>
-    <p>Oh! Dear, you are entering a new world!</p>
-    <p>This is Dmox.</p>
-    <p>A wonderful place!!!</p>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">我的网站</h1>
+                <ul class="nav-menu">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于</a></li>
+                    <li><a href="#services">服务</a></li>
+                    <li><a href="#contact">联系</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h1>欢迎来到我的 GitHub Pages 网站</h1>
+            <p>这是一个演示如何在 GitHub Pages 上使用 CSS 的示例</p>
+            <button class="cta-button">了解更多</button>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>GitHub Pages CSS 指南</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>创建 CSS 文件</h3>
+                        <p>在你的 GitHub 仓库中创建一个新的 CSS 文件，例如 <code>style.css</code></p>
+                    </div>
+                    <div class="card">
+                        <h3>链接 CSS 文件</h3>
+                        <p>在 HTML 的 <code>&lt;head&gt;</code> 部分使用 <code>&lt;link&gt;</code> 标签引入 CSS</p>
+                    </div>
+                    <div class="card">
+                        <h3>编写样式</h3>
+                        <p>在 CSS 文件中编写你的样式规则，如选择器、属性和值</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2>CSS 功能示例</h2>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <div class="feature-icon">🎨</div>
+                        <h3>颜色与背景</h3>
+                        <p>使用 CSS 设置元素颜色、背景和渐变效果</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📐</div>
+                        <h3>布局与定位</h3>
+                        <p>使用 Flexbox 和 Grid 创建响应式布局</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">✨</div>
+                        <h3>动画与过渡</h3>
+                        <p>添加交互效果和动画提升用户体验</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+                        <h3>响应式设计</h3>
+                        <p>使用媒体查询确保网站在各种设备上正常显示</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 我的 GitHub Pages 网站 - 使用 CSS 美化</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互效果
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            alert('感谢您的关注！这是一个在 GitHub Pages 上使用 CSS 的示例。');
+        });
+        
+        // 为卡片添加悬停效果
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
 </body>
 </html>
